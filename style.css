@@ -16,7 +16,7 @@ body{
 }
 
 .main-container {
-    margin: 2% 10%;
+    margin: 2% 5%;
     height: 70vh;
     background-color: white;
     border-radius: 1rem;
@@ -28,7 +28,8 @@ body{
   }
 
 .header{
-    color:var(--primaryColor)
+    color:var(--primaryColor);
+    text-align: center;
 }
 
 label{
@@ -50,7 +51,7 @@ table{
 }
  
 td{
-    width: 20rem;
+    width: 20vw;
     height: 1rem;
     padding: 0.4rem;
 }
