@@ -9,14 +9,22 @@ const noteList = [1000,500,100,20,10,5,1]
 
 checkBtn.addEventListener("click", ()=>{;
     errMsg.style.display = "none";
-    if(billAmt.value < 0){
+    if(parseInt(billAmt.value) < 0){
         errMsg.style.display = "block";
         showErr("Invalid Bill Amount");
-    }else if(billAmt.value < cashGiven.value){
+
+        for (var i=0;i<noteList.length;i++){
+            returnChange[i].innerText = "";
+        }
+    }else if(parseInt(billAmt.value) > parseInt(cashGiven.value)){
         errMsg.style.display = "block";
         showErr("Do you wanna wash plates?");
+
+        for (var i=0;i<noteList.length;i++){
+            returnChange[i].innerText = "";
+        }
     }else{
-        var cashtoGive = cashGiven.value-billAmt.value;
+        var cashtoGive = parseInt(cashGiven.value)-parseInt(billAmt.value);
         calculateNotes(cashtoGive);  
     }
 })
