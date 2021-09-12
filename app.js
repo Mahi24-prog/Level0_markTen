@@ -7,10 +7,13 @@ var errMsg = document.querySelector(".err-msg")
 
 const noteList = [1000,500,100,20,10,5,1]
 
-checkBtn.addEventListener("click", ()=>{
+checkBtn.addEventListener("click", ()=>{;
+    errMsg.style.display = "none";
     if(billAmt.value < 0){
+        errMsg.style.display = "block";
         showErr("Invalid Bill Amount");
     }else if(billAmt.value < cashGiven.value){
+        errMsg.style.display = "block";
         showErr("Do you wanna wash plates?");
     }else{
         var cashtoGive = cashGiven.value-billAmt.value;
