@@ -5,7 +5,7 @@ var returnChange = document.querySelectorAll(".return-change");
 var errMsg = document.querySelector(".err-msg")
 
 
-const noteList = [1000,500,100,20,10,5,1]
+const noteList = [2000,500,100,20,10,5,1]
 
 checkBtn.addEventListener("click", ()=>{;
     errMsg.style.display = "none";
